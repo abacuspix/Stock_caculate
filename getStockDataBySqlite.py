@@ -10,6 +10,7 @@ dataBaseFolder = 'c:\\stock\\'
 dataBaseName = 'stock.db'
 start = datetime.now()
 
+
 def getSockDataFromDB(workFolder, dataBaseFolder, dataBaseName):
     # create connection
     connection = sqlite3.connect(dataBaseFolder+dataBaseName)
@@ -28,7 +29,6 @@ def getSockDataFromDB(workFolder, dataBaseFolder, dataBaseName):
                 db.to_sql("stock_"+stockcode, connection, if_exists="replace")
                 connection.commit()
     connection.close()
-
 
 getSockDataFromDB(workFolder, dataBaseFolder, dataBaseName)
 

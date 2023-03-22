@@ -98,6 +98,6 @@ for stockname in stockList:
     df = getStockData(stockcode, dataBaseName)
     #df = getStockData(stockname)
     stockDf = getMACDByCode(stockcode)
-    print(stockname)
-    print(stockDf.tail(5))
+    #print(stockname)
+    #print(stockDf.tail(5))
     BuyStockFromMACD(stockDf)
