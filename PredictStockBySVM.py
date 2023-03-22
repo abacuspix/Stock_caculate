@@ -34,7 +34,7 @@ def getStockData(code, dataBaseName):
     df.columns = heads
     db.close()
     return df
-origDf = getStockData('SH600000', dataBaseName)
+origDf = getStockData('SH601318', dataBaseName)
 df = origDf[['close', 'high', 'low', 'open', 'volume', 'date']]
 # diff列表示本日和上日收盘价的差
 df['diff'] = df["close"]-df["close"].shift(1)
